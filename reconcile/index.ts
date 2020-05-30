@@ -8,11 +8,13 @@ const modelFacade = () => {
   
   const reaction = new JustLogReaction()
   const reaction2 = new LogAndSwitch()
+
+  // const reconciliation = new Reconciliation(reaction)
   const reconciliation = new Reconciliation(reaction2)
 
   reconciliation.compare(oldModel, newModel)
 
-  return oldModel;
+  return newModel;
 }
 
 const modelResult = modelFacade();
